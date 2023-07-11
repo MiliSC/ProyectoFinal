@@ -1,8 +1,9 @@
 import { collection, getDocs } from "firebase/firestore"; 
 import { useEffect, useState } from "react";
 import { db } from "../../firebase/Firebase";
-
-
+import { Button, Grid, Checkbox,TextField, Card, CardContent} from "@mui/material";
+import './styles.css';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export const Principal = () =>{
     const [act, setAct] = useState([]);
@@ -21,17 +22,32 @@ export const Principal = () =>{
 
     },[]);
 
+    
     return(
         <div>
-            {
-                act.length>0 && act.map((prod)=>(
+            <Grid container>
+                <Grid item md={12}>
+                <h1>Mis actividades</h1><br/>
+                </Grid>
+                <Grid item md={12}>
+                <Card>
+                    <CardContent>
+                        <Grid item md={12} > {
+                            
+                    act.length>0 && act.map((prod)=>(
+                        <div style={{display: "flex"}}>
                     <div key={prod.id}>
-                            <h1>{prod.nombre}</h1>
-                            <h2>hola</h2>
-                        </div>
-                        
-                )
-                )}
+                        <Checkbox onClick={()=>cambiarestado(prod)}/>{prod.nombre}
+                        <Button onClick={() => removeItem(car.id)} startIcon={<DeleteIcon />}></Button> 
+                    </div>
+                    </div>
+                    ))
+                }
+                        </Grid>
+                    </CardContent>
+                </Card>
+                </Grid>
+            </Grid>
         </div>
     )
 }
