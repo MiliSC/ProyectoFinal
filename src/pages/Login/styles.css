@@ -1,0 +1,30 @@
+
+  
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Rubik:wght@300&display=swap');
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+   
+}
+
+
+.olvidepass{
+    text-align: right;
+    color: rgb(35, 35, 94);
+    text-align: right;
+}
+
+.grid-olvide{
+    text-align: right;
+}
+
+.login{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(14, 61, 83);
+    font-weight: bold;
+
+}

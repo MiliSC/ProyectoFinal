@@ -22,18 +22,24 @@ export const Principal = () =>{
     },[]);
 
     return(
-       
         <div>
-            <h2>hola</h2>
             {
-                
-            act.map((prod)=>{
-                <div key={prod.id}>
-                    <h1>hola</h1>
-                    <p>{prod.nombre}</p>
-                </div>
-})
-            }
+                act.length>0 && act.map((prod)=>(
+                    <div key={prod.id}>
+                            <h1>{prod.nombre}</h1>
+                            <h2>hola</h2>
+                        </div>
+                        
+                )
+                )}
         </div>
     )
 }
+
+// {
+//     return (
+//         <div key={prod.id}>
+//         <h1>{prod.nombre}</h1>
+//     </div>
+//     )
+// }
